@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { ITransaction } from "../lib/interface";
+import { ITransaction } from "../../lib/interface";
 
 interface TransactionTableProps {
   transact: ITransaction[];

@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
-import { ITransaction } from "../lib/interface";
+import { ITransaction } from "../../lib/interface";
 
 interface CashflowProps {
   transact: ITransaction[];
@@ -137,7 +137,7 @@ export default function Cashflow({ transact }: CashflowProps) {
           </div>
         </div>
         <div className="flex flex-1 flex-col rounded-2xl border px-6 py-4 shadow *:flex-1 max-md:mt-4">
-          <h2 className="-mb-6 text-xl font-semibold">Expenses Category</h2>
+          <h2 className="text-xl font-semibold">Expenses Category</h2>
           {categoryName.map((e, i) => (
             <div key={i} className="flex items-center gap-2">
               <h2 className="font-medium">{e}</h2>

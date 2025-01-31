@@ -2,8 +2,8 @@
 import TransactionTable from "../components/TransactionTable";
 import Cashflow from "../components/Cashflow";
 import { useEffect, useState } from "react";
-import { ITransaction } from "../lib/interface";
-import { fetchTransactions } from "../lib/transaction";
+import { ITransaction } from "../../lib/interface";
+import { fetchTransactions } from "../../lib/transaction";
 
 export default function Page() {
   const date = new Date(Date.now()).toDateString().split(" ");
