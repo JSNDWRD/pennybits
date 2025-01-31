@@ -10,13 +10,11 @@ export default function Page() {
   const dateText = `${date[0]}, ${date.slice(1).join(" ")}`;
 
   const [transact, setTransact] = useState<ITransaction[]>([]);
-  const [loading, setLoading] = useState(true);
 
   // Fetch transactions
   const fetchData = async () => {
     const data = await fetchTransactions();
     setTransact(data);
-    setLoading(false);
   };
 
   useEffect(() => {

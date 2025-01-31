@@ -32,6 +32,9 @@ function LandingPage() {
             </span>
           </button>
         </SignInButton>
+        <span>
+          Login with <code>username: user</code> and <code>password: user</code>
+        </span>
       </div>
     </div>
   );
