@@ -46,11 +46,17 @@ export default function Cashflow({ transact }: CashflowProps) {
 
       for (let i = 0; i < transact.length; i++) {
         for (let j = 0; j < categoryName.length; j++) {
+          const transactionDate = new Date(transact[i].date);
           if (
-            transact[i].category == categoryName[j] &&
-            transact[i].type == 1
+            currentDate.getMonth() == transactionDate.getMonth() &&
+            currentDate.getFullYear() == transactionDate.getFullYear()
           ) {
-            categoryCash[j] += transact[i].amount;
+            if (
+              transact[i].category == categoryName[j] &&
+              transact[i].type == 1
+            ) {
+              categoryCash[j] += transact[i].amount;
+            }
           }
         }
       }
