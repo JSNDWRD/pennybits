@@ -1,9 +1,12 @@
 import { SignInButton } from "@clerk/nextjs";
+import Image from "next/image";
+import preview from "@/public/preview.png";
+import previewMobile from "@/public/preview-mobile.jpg";
 
 function LandingPage() {
   return (
-    <div className="flex h-[90dvh] flex-col justify-center gap-4 bg-base-100 p-4 backdrop-blur-sm">
-      <div className="mx-auto flex flex-col items-center justify-center gap-4 lg:w-2/3">
+    <div className="flex min-h-[90dvh] flex-col justify-center gap-4 bg-base-100 p-4 backdrop-blur-sm">
+      <div className="mx-auto flex h-screen flex-col items-center justify-center gap-4 lg:w-2/3">
         <h1 className="text-center text-7xl font-bold">
           Manage Your <span className="text-primary">Finances</span> Now.
         </h1>
@@ -32,9 +35,29 @@ function LandingPage() {
             </span>
           </button>
         </SignInButton>
-        <span>
-          Login with <code>username: user</code> and <code>password: user</code>
+        <span className="text-center">
+          Login with
+          <br /> <code>username: user</code>
+          <br /> <code>password: user</code>
         </span>
+      </div>
+      <div className="grid md:grid-cols-3">
+        <div className="mockup-browser h-fit border bg-base-300 md:col-span-2">
+          <div className="mockup-browser-toolbar">
+            <div className="input">https://pennybits.vercel.app</div>
+          </div>
+          <div className="flex justify-center bg-base-200">
+            <Image src={preview} alt="Browser Mockup" />
+          </div>
+        </div>
+        <div className="mockup-phone my-auto h-fit max-md:hidden">
+          <div className="camera"></div>
+          <div className="display">
+            <div className="artboard artboard-demo phone-1">
+              <Image src={previewMobile} alt="Mobile Mockup" />
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
