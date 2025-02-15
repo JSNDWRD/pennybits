@@ -73,7 +73,7 @@ export default function Cashflow({ transact }: CashflowProps) {
     <div>
       <div className="h-full gap-4 md:flex">
         <div className="flex flex-col gap-4 *:border">
-          <div className="stats shadow">
+          <div className="stats">
             <div className="stat">
               <div className="stat-figure text-blue-600">
                 <svg
@@ -95,7 +95,7 @@ export default function Cashflow({ transact }: CashflowProps) {
               <div className="stat-value font-bold">${balance.toFixed(2)}</div>
             </div>
           </div>
-          <div className="stats shadow">
+          <div className="stats">
             <div className="stat">
               <div className="stat-figure text-success">
                 <svg
@@ -118,7 +118,7 @@ export default function Cashflow({ transact }: CashflowProps) {
               <div className="stat-desc italic">This month</div>
             </div>
           </div>
-          <div className="stats shadow">
+          <div className="stats">
             <div className="stat">
               <div className="stat-figure text-error">
                 <svg
@@ -142,7 +142,7 @@ export default function Cashflow({ transact }: CashflowProps) {
             </div>
           </div>
         </div>
-        <div className="flex flex-1 flex-col rounded-2xl border px-6 py-4 shadow *:flex-1 max-md:mt-4">
+        <div className="flex flex-1 flex-col rounded-2xl border px-6 py-4 *:flex-1 max-md:mt-4">
           <h2 className="text-xl font-semibold">Expenses Category</h2>
           {categoryName.map((e, i) => (
             <div key={i} className="flex items-center gap-2">
