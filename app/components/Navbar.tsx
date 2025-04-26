@@ -5,20 +5,14 @@ import { usePathname } from "next/navigation";
 
 function Navbar() {
   const links = [
-    {
-      name: "Dashboard",
-      url: "/dashboard",
-    },
-    {
-      name: "Landing Page",
-      url: "/",
-    },
+    { name: "Dashboard", url: "/dashboard" },
+    { name: "Landing Page", url: "/" },
   ];
 
   const pathname = usePathname();
 
   return (
-    <div className="navbar sticky top-0 z-50 w-full items-center border-b border-b-base-300 bg-base-100">
+    <div className="navbar fixed top-0 z-50 w-full items-center border-b border-b-base-300 bg-base-100">
       <div className="navbar-start">
         <SignedIn>
           <div className="dropdown">

@@ -67,7 +67,7 @@ export default function Cashflow({ transact }: CashflowProps) {
       setExpense(expense);
     };
     countCashflow();
-  }, [transact]);
+  }, [transact, categoryName]);
 
   return (
     <div>
